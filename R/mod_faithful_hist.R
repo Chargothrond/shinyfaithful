@@ -1,0 +1,38 @@
+#' faithful_hist UI Function
+#'
+#' @description A shiny Module.
+#'
+#' @param id,input,output,session Internal parameters for {shiny}.
+#'
+#' @noRd
+#'
+#' @importFrom shiny NS tagList
+mod_faithful_hist_ui <- function(id){
+  ns <- NS(id)
+  tagList(
+
+  )
+}
+
+#' faithful_hist Server Functions
+#'
+#' @noRd
+mod_faithful_hist_server <- function(id){
+  moduleServer( id, function(input, output, session){
+    ns <- session$ns
+    # generate bins based on input$bins from ui.R
+    variable <- "waiting"
+    x    <- datasets::faithful[, variable, drop = FALSE]
+    bins <- reactive(seq(min(x), max(x), length.out = input$bins + 1))
+    output$distPlot <- renderPlot({
+      # draw the histogram with the specified number of bins
+      plot_hist(x = x, breaks = bins(), freq = !input$density)
+    })
+  })
+}
+
+## To be copied in the UI
+# mod_faithful_hist_ui("faithful_hist_1")
+
+## To be copied in the server
+# mod_faithful_hist_server("faithful_hist_1")
