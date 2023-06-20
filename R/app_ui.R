@@ -13,6 +13,7 @@ app_ui <- function(request) {
       # Application title
       titlePanel("Old Faithful Geyser Data"),
       # module
+      mod_faithful_hist_ui("faithful_hist_1")
     )
   )
 }

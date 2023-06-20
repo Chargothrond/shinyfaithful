@@ -10,6 +10,7 @@ BugReports: https://github.com/Chargothrond/shinyfaithful/issues
 Imports: 
     config (>= 0.3.1),
     golem (>= 0.4.1),
+    pkgload,
     shiny (>= 1.7.4)
 Suggests: 
     spelling,
