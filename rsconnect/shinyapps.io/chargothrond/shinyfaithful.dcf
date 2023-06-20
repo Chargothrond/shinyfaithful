@@ -5,7 +5,7 @@ account: chargothrond
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 9336768
-bundleId: 7365978
+bundleId: 7366018
 url: https://chargothrond.shinyapps.io/shinyfaithful/
-when: 1687257469.6241
-lastSyncTime: 1687257469.62415
+when: 1687257950.90099
+lastSyncTime: 1687257950.90101
